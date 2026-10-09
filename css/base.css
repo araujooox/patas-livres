@@ -1,0 +1,14 @@
+/* Reset e estilos base */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:var(--fs-md)/1.6 var(--font-body);color:var(--color-ink);background:var(--color-paper)}
+h1,h2,h3{font-family:var(--font-title);line-height:1.2;color:var(--color-navy);margin:0 0 var(--space-2)}
+h1{font-size:var(--fs-xl)}h2{font-size:var(--fs-lg)}h3{font-size:var(--fs-md)}
+p{margin:0 0 var(--space-2)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--color-teal)}
+:focus-visible{outline:3px solid var(--color-info);outline-offset:2px}
+header :focus-visible,footer :focus-visible,.band :focus-visible{outline-color:var(--color-yellow)}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:var(--space-2);top:var(--space-1);background:var(--color-yellow);padding:var(--space-1);z-index:30}
+address{font-style:normal}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

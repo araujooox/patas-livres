@@ -1,0 +1,18 @@
+/* Menu principal: hambúrguer no celular e dropdown no desktop (só CSS) */
+.menu-check{position:absolute;width:1px;height:1px;opacity:0}
+.hamburger{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:2px solid var(--color-yellow);border-radius:var(--radius);cursor:pointer}
+.hamburger span,.hamburger span::before,.hamburger span::after{display:block;content:"";width:22px;height:3px;background:var(--color-yellow);border-radius:2px;position:relative;transition:transform .2s,top .2s}
+.hamburger span::before{position:absolute;top:-7px}
+.hamburger span::after{position:absolute;top:7px}
+.menu-check:focus-visible+.hamburger{outline:3px solid var(--color-yellow);outline-offset:2px}
+.menu-check:checked+.hamburger span{background:transparent}
+.menu-check:checked+.hamburger span::before{top:0;transform:rotate(45deg)}
+.menu-check:checked+.hamburger span::after{top:0;transform:rotate(-45deg)}
+nav{display:none;width:100%}
+.menu-check:checked~nav{display:block}
+.menu,.submenu{list-style:none;margin:0;padding:0}
+.menu{display:flex;flex-direction:column;gap:var(--space-1)}
+.menu a{display:block;color:var(--color-white);text-decoration:none;padding:var(--space-1) var(--space-2);border-radius:999px;transition:background .2s}
+.menu a:hover,.menu a[aria-current]{background:var(--color-yellow);color:var(--color-navy)}
+.has-sub>a::after{content:" \25BE"}
+.submenu{padding-left:var(--space-3)}

@@ -1,0 +1,52 @@
+/* Componentes de interface */
+/* Botões com estados: hover, focus (base.css), active e disabled */
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--color-yellow);color:var(--color-navy);font:700 var(--fs-md) var(--font-body);padding:12px 22px;border:2px solid var(--color-yellow);border-radius:6px;text-decoration:none;cursor:pointer;transition:background .2s,transform .1s}
+.btn:hover{background:var(--color-white);border-color:var(--color-navy)}
+.btn:active{transform:translateY(2px)}
+.btn.alt{background:transparent;border-color:var(--color-navy)}
+.btn.alt:hover{background:var(--color-navy);color:var(--color-white)}
+.btn:disabled,.btn:disabled:hover{background:var(--color-line);border-color:var(--color-line);color:var(--color-gray);cursor:not-allowed;transform:none}
+.actions{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.actions .btn{width:100%}
+/* Cards de projetos */
+.card{display:flex;flex-direction:column;background:var(--color-white);border:1px solid var(--color-line);border-radius:var(--radius);overflow:hidden;padding:var(--space-2)}
+.card img{max-width:none;width:calc(100% + 2*var(--space-2));margin:calc(-1*var(--space-2)) calc(-1*var(--space-2)) var(--space-2)}
+.card .btn{margin-top:var(--space-2)}
+/* Badges e tags */
+.badge{display:inline-block;font-size:var(--fs-xs);font-weight:700;padding:2px var(--space-1);border-radius:999px;margin-right:4px}
+.badge-teal{background:var(--color-teal-light);color:#0d5c54}
+.badge-yellow{background:var(--color-yellow);color:var(--color-navy)}
+.badge-navy{background:var(--color-navy);color:var(--color-white)}
+/* Alertas */
+.alert{border-left:6px solid;border-radius:6px;padding:var(--space-2);margin:var(--space-2) 0}
+.alert-info{background:#e8f0fb;border-color:var(--color-info);color:#10366b}
+.alert-success{background:#e6f4ea;border-color:var(--color-success);color:#0f4c24}
+.alert-warning{background:#fff3d6;border-color:var(--color-warning);color:#5c3c00}
+.alert-danger{background:#fdf1f0;border-color:var(--color-danger);color:#6e140f}
+/* Toast (aparece quando a URL termina em #sucesso) */
+.toast{position:fixed;right:var(--space-3);bottom:var(--space-3);max-width:320px;box-shadow:var(--shadow);opacity:0;visibility:hidden;z-index:20}
+.toast:target{animation:toast 8s ease forwards}
+@keyframes toast{0%{opacity:0;visibility:visible;transform:translateY(16px)}6%,92%{opacity:1;visibility:visible;transform:none}100%{opacity:0;visibility:hidden}}
+/* Modal (abre com #modal-pix, fecha com link) */
+.modal{display:none;position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(20,33,61,.75);place-items:center;padding:var(--space-2);z-index:25}
+.modal:target{display:grid}
+.modal-box{background:var(--color-white);border-radius:var(--radius);padding:var(--space-4);max-width:420px;box-shadow:var(--shadow)}
+/* Formulários com validação visual */
+fieldset{border:1px solid var(--color-line);border-radius:var(--radius);margin:0 0 var(--space-3);padding:var(--space-2) var(--space-3);background:var(--color-white)}
+legend{font-weight:700;color:var(--color-navy);padding:0 var(--space-1)}
+label{display:block;font-weight:600}
+input,select,textarea{display:block;width:100%;margin-top:4px;padding:10px;border:2px solid var(--color-gray);border-radius:6px;font:inherit;background:var(--color-white);transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--color-info);box-shadow:0 0 0 3px rgba(28,95,184,.25)}
+input[type=radio],input[type=checkbox]{display:inline;width:auto;margin:0 var(--space-1) 0 0}
+input:not(:placeholder-shown):valid{border-color:var(--color-success)}
+input:not(:placeholder-shown):invalid{border-color:var(--color-danger);background:#fdf1f0}
+select:valid{border-color:var(--color-success)}
+/* Tabela, progresso e números */
+table{border-collapse:collapse;width:100%;background:var(--color-white)}
+caption{text-align:left;font-weight:700;padding-bottom:var(--space-1)}
+th,td{border:1px solid var(--color-line);padding:var(--space-1) var(--space-2);text-align:left}
+th{background:var(--color-navy);color:var(--color-white)}
+progress{width:100%;height:12px;accent-color:var(--color-teal)}
+.nums{margin:0}
+.nums div{display:flex;flex-direction:column-reverse}
+.nums dd{margin:0;font:700 var(--fs-2xl) var(--font-title);color:var(--color-yellow)}

@@ -1,0 +1,25 @@
+/* Layout geral com CSS Grid + grid customizado de 12 colunas */
+body{display:grid;grid-template-rows:auto 1fr auto;min-height:100vh}
+.bar,.wrap{width:100%;max-width:var(--container);margin-left:auto;margin-right:auto}
+.wrap{padding:var(--space-5) var(--space-2)}
+.bar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-2);padding:var(--space-2)}
+header,footer,.band{background:var(--color-navy);color:var(--color-white)}
+.band h2,.band h3{color:var(--color-white)}
+.band a,footer a{color:var(--color-yellow)}
+footer .wrap{padding:var(--space-3) var(--space-2)}
+.row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--space-3);align-items:start}
+.row>*{grid-column:span 12}
+.hero{align-items:center}
+.cards{align-items:stretch}
+.col-1{grid-column:span 1}
+.col-2{grid-column:span 2}
+.col-3{grid-column:span 3}
+.col-4{grid-column:span 4}
+.col-5{grid-column:span 5}
+.col-6{grid-column:span 6}
+.col-7{grid-column:span 7}
+.col-8{grid-column:span 8}
+.col-9{grid-column:span 9}
+.col-10{grid-column:span 10}
+.col-11{grid-column:span 11}
+.col-12{grid-column:span 12}

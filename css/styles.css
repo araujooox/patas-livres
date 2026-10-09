@@ -1,0 +1,7 @@
+/* Arquivo principal: importa os módulos na ordem */
+@import url("variables.css");
+@import url("base.css");
+@import url("layout.css");
+@import url("navigation.css");
+@import url("components.css");
+@import url("responsive.css");
