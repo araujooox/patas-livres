@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cadastre-se como voluntário ou doador do Instituto Patas Livres.">
+<title>Cadastro | Instituto Patas Livres</title>
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header>
+<div class="bar">
+<a class="brand" href="index.html"><img src="img/logo.svg" width="220" height="64" alt="Instituto Patas Livres, página inicial"></a>
+<input class="menu-check" type="checkbox" id="menu-toggle" aria-label="Abrir ou fechar o menu">
+<label class="hamburger" for="menu-toggle"><span></span></label>
+<nav aria-label="Principal">
+<ul class="menu">
+<li><a href="index.html">Início</a></li>
+<li class="has-sub"><a href="projetos.html">Projetos</a>
+<ul class="submenu">
+<li><a href="projetos.html#resgate">Resgate Solidário</a></li>
+<li><a href="projetos.html#castra">Castra Móvel</a></li>
+<li><a href="projetos.html#lar">Lar Temporário</a></li>
+<li><a href="projetos.html#voluntariado">Ser voluntário</a></li>
+<li><a href="projetos.html#doar">Como doar</a></li>
+</ul>
+</li>
+<li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<section class="wrap hero row" aria-labelledby="cadastro">
+<div class="col-12 col-md-7">
+<h1 id="cadastro">Cadastro de voluntários e doadores</h1>
+<p>Preencha os campos abaixo. Todos são obrigatórios e retornamos o contato em até dois dias úteis.</p>
+<p class="alert alert-info" role="note">Seus dados são usados apenas para contato do instituto.</p>
+</div>
+<img class="col-12 col-md-5" src="img/lar.svg" width="800" height="450" alt="Ilustração de uma pata ao lado de uma casa">
+</section>
+
+<section class="wrap" aria-labelledby="dados">
+<h2 id="dados">Seus dados</h2>
+<form action="cadastro.html#sucesso" method="get">
+<fieldset>
+<legend>Como você quer ajudar</legend>
+<label><input type="radio" name="perfil" value="voluntario" required>Voluntário</label>
+<label><input type="radio" name="perfil" value="doador">Doador</label>
+</fieldset>
+
+<fieldset>
+<legend>Dados pessoais</legend>
+<div class="row">
+<label class="col-12 col-md-6">Nome completo<input type="text" name="nome" minlength="8" maxlength="90" autocomplete="name" placeholder="Maria Silva Santos" required></label>
+<label class="col-12 col-md-6">E-mail<input type="email" name="email" autocomplete="email" placeholder="maria@email.com" required></label>
+<label class="col-12 col-md-6">CPF<input type="text" name="cpf" inputmode="numeric" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" data-mask="cpf" required></label>
+<label class="col-12 col-md-6">Telefone<input type="tel" name="telefone" maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(11) 99999-9999" data-mask="telefone" required></label>
+<label class="col-12 col-md-6">Data de nascimento<input type="date" name="nascimento" min="1900-01-01" max="2008-10-09" required></label>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Endereço</legend>
+<div class="row">
+<label class="col-12 col-md-6">CEP<input type="text" name="cep" inputmode="numeric" maxlength="9" pattern="\d{5}-\d{3}" placeholder="00000-000" data-mask="cep" autocomplete="postal-code" required></label>
+<label class="col-12 col-md-6">Endereço<input type="text" name="endereco" minlength="5" maxlength="120" placeholder="Rua, número e complemento" autocomplete="address-line1" required></label>
+<label class="col-12 col-md-6">Cidade<input type="text" name="cidade" minlength="2" maxlength="60" placeholder="São Paulo" required></label>
+<label class="col-12 col-md-6">Estado<select name="estado" required><option value="">Selecione</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></label>
+</div>
+</fieldset>
+
+<p><label><input type="checkbox" name="termos" required>Concordo em receber contato do instituto sobre voluntariado e doações.</label></p>
+<p class="actions"><button class="btn" type="submit">Enviar cadastro</button> <button class="btn alt" type="reset">Limpar</button></p>
+</form>
+</section>
+<p class="toast alert alert-success" id="sucesso" role="status">Cadastro enviado! Em breve entraremos em contato. <a href="cadastro.html">Fechar</a></p>
+<script src="js/mascaras.js"></script>
+</main>
+<footer>
+<div class="wrap">
+<p><strong>Instituto Patas Livres</strong><br>Projeto acadêmico: ONG e dados fictícios.</p>
+<p><a href="cadastro.html">Cadastre-se</a> e ajude um animal ainda esta semana.</p>
+</div>
+</footer>
+</body>
+</html>

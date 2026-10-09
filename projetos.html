@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Conheça os projetos do Instituto Patas Livres, saiba como ser voluntário e como doar.">
+<title>Projetos | Instituto Patas Livres</title>
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header>
+<div class="bar">
+<a class="brand" href="index.html"><img src="img/logo.svg" width="220" height="64" alt="Instituto Patas Livres, página inicial"></a>
+<input class="menu-check" type="checkbox" id="menu-toggle" aria-label="Abrir ou fechar o menu">
+<label class="hamburger" for="menu-toggle"><span></span></label>
+<nav aria-label="Principal">
+<ul class="menu">
+<li><a href="index.html">Início</a></li>
+<li class="has-sub"><a href="projetos.html" aria-current="page">Projetos</a>
+<ul class="submenu">
+<li><a href="projetos.html#resgate">Resgate Solidário</a></li>
+<li><a href="projetos.html#castra">Castra Móvel</a></li>
+<li><a href="projetos.html#lar">Lar Temporário</a></li>
+<li><a href="projetos.html#voluntariado">Ser voluntário</a></li>
+<li><a href="projetos.html#doar">Como doar</a></li>
+</ul>
+</li>
+<li><a href="cadastro.html">Cadastro</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<section class="wrap" aria-labelledby="projetos">
+<h1 id="projetos">Nossos projetos</h1>
+<p>Cada projeto tem uma meta de arrecadação aberta para acompanhamento.</p>
+<h2>Projetos em andamento</h2>
+<div class="cards row">
+<article class="card col-12 col-sm-6 col-lg-4" id="resgate">
+<img src="img/resgate.svg" width="800" height="450" loading="lazy" alt="Ilustração de uma pata com um círculo ao fundo, símbolo do resgate">
+<p><span class="badge badge-teal">Em andamento</span><span class="badge badge-yellow">Plantão 24h</span></p>
+<h3>Resgate Solidário</h3>
+<p>Equipe que atende denúncias de animais feridos ou abandonados e leva cada um para avaliação veterinária.</p>
+<p>Arrecadado: R$ 18.400 de R$ 30.000</p>
+<progress value="18400" max="30000" aria-label="Meta do Resgate Solidário">61%</progress>
+</article>
+<article class="card col-12 col-sm-6 col-lg-4" id="castra">
+<img src="img/castramovel.svg" width="800" height="450" loading="lazy" alt="Ilustração de uma pata com uma cruz, símbolo da clínica móvel">
+<p><span class="badge badge-teal">Em andamento</span><span class="badge badge-navy">Atendimento gratuito</span></p>
+<h3>Castra Móvel</h3>
+<p>Clínica sobre rodas que castra gratuitamente animais de famílias de baixa renda nos bairros da região.</p>
+<p>Arrecadado: R$ 9.600 de R$ 20.000</p>
+<progress value="9600" max="20000" aria-label="Meta do Castra Móvel">48%</progress>
+</article>
+<article class="card col-12 col-sm-6 col-lg-4" id="lar">
+<img src="img/lar.svg" width="800" height="450" loading="lazy" alt="Ilustração de uma pata ao lado de uma casa, símbolo do lar temporário">
+<p><span class="badge badge-yellow">Meta quase batida</span><span class="badge badge-navy">Vagas limitadas</span></p>
+<h3>Lar Temporário</h3>
+<p>Famílias acolhem um animal em casa até que ele seja adotado, com ração e consultas pagas pelo instituto.</p>
+<p>Arrecadado: R$ 11.500 de R$ 15.000</p>
+<progress value="11500" max="15000" aria-label="Meta do Lar Temporário">77%</progress>
+<p class="alert alert-warning" role="note">Faltam só R$ 3.500 para a meta.</p>
+<button class="btn" type="button" disabled>Vagas esgotadas</button>
+</article>
+</div>
+</section>
+
+<section class="band" id="voluntariado" aria-labelledby="voluntario">
+<div class="wrap">
+<h2 id="voluntario">Como ser voluntário</h2>
+<p>Você pode ajudar no abrigo, no transporte de animais, nas feiras de adoção ou oferecendo um lar temporário.</p>
+<ol>
+<li>Preencha o <a href="cadastro.html">cadastro</a> com seus dados.</li>
+<li>Participe da conversa de boas-vindas, aos sábados às 10h.</li>
+<li>Escolha o projeto e o horário que cabem na sua rotina.</li>
+</ol>
+</div>
+</section>
+
+<section class="wrap" id="doar" aria-labelledby="doacao">
+<h2 id="doacao">Como doar</h2>
+<p>Doações em dinheiro, ração ou medicamentos mantêm o abrigo funcionando. Para doar em dinheiro, faça um Pix para a chave <strong>doe@pataslivres.example</strong> (dado fictício).</p>
+<table>
+<caption>O que cada doação faz</caption>
+<thead>
+<tr><th scope="col">Valor</th><th scope="col">Ajuda a pagar</th></tr>
+</thead>
+<tbody>
+<tr><td>R$ 30</td><td>Uma semana de ração para um animal</td></tr>
+<tr><td>R$ 80</td><td>Vacinas de um filhote</td></tr>
+<tr><td>R$ 150</td><td>Uma castração na clínica móvel</td></tr>
+</tbody>
+</table>
+<p class="actions"><a class="btn" href="#modal-pix">Ver chave Pix</a> <a class="btn alt" href="cadastro.html">Cadastrar como doador</a></p>
+<div class="modal" id="modal-pix" role="dialog" aria-modal="true" aria-labelledby="pix-titulo">
+<div class="modal-box">
+<h3 id="pix-titulo">Doe por Pix</h3>
+<p>Chave: <strong>doe@pataslivres.example</strong> (dado fictício).</p>
+<a class="btn" href="#doar">Fechar</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<p><strong>Instituto Patas Livres</strong><br>Projeto acadêmico: ONG e dados fictícios.</p>
+<p><a href="cadastro.html">Cadastre-se</a> e ajude um animal ainda esta semana.</p>
+</div>
+</footer>
+</body>
+</html>
